@@ -17,7 +17,7 @@ app.post("/tod", (req, res) => {
   todos.push(newTodo);
 
   res.status(201).json({
-    message: "✅ Todo added successfully",
+    message: "Todo added successfully",
     todos,
   });
 });
@@ -26,7 +26,7 @@ app.get("/tod", (req, res) => {
   res.json(todos);
 });
 
-// ✅ Simple DELETE route
+// Simple DELETE route
 app.delete("/tod/:id", (req, res) => {
   const id = parseInt(req.params.id);
   todos = todos.filter(todo => todo.id !== id);
@@ -36,3 +36,4 @@ app.delete("/tod/:id", (req, res) => {
 app.listen(3000, () => {
   console.log("🚀 Server started");
 });
+
