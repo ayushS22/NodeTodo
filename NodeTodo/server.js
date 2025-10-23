@@ -26,7 +26,7 @@ app.get("/tod", (req, res) => {
   res.json(todos);
 });
 
-// Simple DELETE route
+// Simple DELETE route method
 app.delete("/tod/:id", (req, res) => {
   const id = parseInt(req.params.id);
   todos = todos.filter(todo => todo.id !== id);
@@ -36,4 +36,5 @@ app.delete("/tod/:id", (req, res) => {
 app.listen(3000, () => {
   console.log("🚀 Server started");
 });
+
 
