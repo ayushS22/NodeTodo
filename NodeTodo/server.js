@@ -32,9 +32,10 @@ app.delete("/tod/:id", (req, res) => {
   todos = todos.filter(todo => todo.id !== id);
   res.json({ message: "🗑️ Todo deleted successfully", todos });
 });
-
+//listening at port 3000
 app.listen(3000, () => {
   console.log("🚀 Server started");
 });
+
 
 
